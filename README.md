@@ -65,8 +65,13 @@ docker-compose up -d
 
 ```bash
 cd asset-management
-sh ./mvnw spring-boot:run
+# Linux / macOS
+./mvnw spring-boot:run
+# Windows
+mvnw.cmd spring-boot:run
 ```
+
+If you get `Permission denied` on Linux/macOS, run `sh ./mvnw ...` instead.
 
 The API runs on:
 - `http://localhost:8080`
@@ -79,10 +84,14 @@ From `asset-management/`:
 
 ```bash
 # Run tests
-sh ./mvnw test
+./mvnw test
+# Windows
+mvnw.cmd test
 
 # Build jar
-sh ./mvnw clean package
+./mvnw clean package
+# Windows
+mvnw.cmd clean package
 ```
 
 ---
